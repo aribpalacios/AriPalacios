@@ -1,15 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListaContainer  from './ItemListContainer/ItemListContainer';
+import ItemListContainer  from './ItemListContainer/ItemListContainer';
 
 
 function App() {
   return (
     <div className="App"> 
       <NavBar />      
-      Version 1
-      <ItemListaContainer />
+      
+      <ItemListContainer greeting="Hola soy greeting" />
     </div>
   );
 }
