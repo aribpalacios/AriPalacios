@@ -1,19 +1,66 @@
 import Item from "../Item/Item";
+import { useState, useEffect } from "react";
 import "./ItemListContainer.css";
+import ItemCount from "../components/ItemCount/ItemCount";
+import { getFetch } from "../helpers/getFetch";
 
-export function ItemListaContainer (props) {
+const ItemListContainer =() => {
+const [string, setString] = useState('')
+const [products, setProducts]= useState([])
+const [loading, setLoading]=useState(true)
+const [bool, setBool]=useState(true)
 
+
+
+function mostrarElDiv(){
+  setString('hola me inserte')
+}
+function onAdd(cantidad){
+  console.log(cantidad)
+}
+
+useEffect(()=>{
+  getFetch //api
+  .then(data =>{
+    console.log('llamada Api')
+    setProducts(data)
+  })
+  .catch(error => console.log(error))
+  .finally(()=> setLoading(false))
+  return () =>{
+    console.log('clean')
+  }
+    },[])
 
 
   return(
-    <div className="item-list-container">
-      <h3>{props.greeting}</h3>
-      <Item name="Stag" price="150" imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgKLu3ajDUtX85RCUd5UFSjKt9bAwaKtWYBpkWZMAY3rw96naiczBkEkcw-uTaq2TPsu8&usqp=CAU  "  />
-      <Item name="Nordic" price="150" imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnBnMwdlvJ3fJc7TTs5RDnEjQ2Odx_FkXReSyWwfU6F0Y3nOvwPbwc-R0eOqBgc8YXHvE&usqp=CAU"/>
-      <Item name="Valhalla" price="150" imgUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShp4MFU9TAK959_0YuASgi1R3NCCFdq_WoQeVjepnTOuV9s5S0r7gS9Y5TqbVhCOzppDY&usqp=CAU" />
-     
+    <div>
+      <div className='card-columns'>
+      { loading ? <h1> Cargando...</h1>: products.map(prod => <div key={prod.id} className="card w-50 mt-5">
+                    <div className="card-header">
+                      {prod.name}
+                     </div> 
+                      <div className="card-body">
+                        <img src={prod.foto} alt="foto"/>
+                        {prod.age}
+                        </div>
+                       <div className="card-footer">
+                          <button className="btn btn-outline-primary btn-block">
+                            detalle persona
+                          </button>
+                         </div>
+                    </div> 
+      )}
+      </div>
+      
+      <div> 
+        {string !=='' && <label>{string}</label>}
+      </div>
+      <button onClick={mostrarElDiv}> Click</button>
+
+      <ItemCount initial={1} stock={6} onAdd={onAdd} />
     </div>
   )
 }
 
-export default ItemListaContainer;
+export default ItemListContainer;
