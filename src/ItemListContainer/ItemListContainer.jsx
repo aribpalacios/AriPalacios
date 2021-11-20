@@ -36,7 +36,7 @@ useEffect(()=>{
   return(
     <div>
       <div className='card-columns'>
-      { loading ? <h1> Cargando...</h1>: products.map(prod => <div key={prod.id} className="card w-50 mt-5">
+      { loading ? <h1> Cargando...</h1>: products.map(prod => <div key={prod.id} className="card w-25 mt-5">
                     <div className="card-header">
                       {prod.name}
                      </div> 
@@ -46,7 +46,7 @@ useEffect(()=>{
                         </div>
                        <div className="card-footer">
                           <button className="btn btn-outline-primary btn-block">
-                            detalle persona
+                            Agregar
                           </button>
                          </div>
                     </div> 
