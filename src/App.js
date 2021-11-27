@@ -1,25 +1,23 @@
-import {useState, useEffect} from 'react'
-import NavBar from './components/NavBar/NavBar';
-import ItemListContainer  from './ItemListContainer/ItemListContainer';
-import Boton from './components/Boton/Boton';
+import './App.css';
+import NavBar from './components/NavBar';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {getFetch} from './helpers/getFetch';
-
-
+import ItemListContainer from './components/container/ItemListContainer';
+import ItemDetailContainer from './components/detalle/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-
-
   return (
-
-    <div className="App"> 
-      <NavBar />      
-      <ItemListContainer />
+    <BrowserRouter>
+      <NavBar />
+      {/* 
+      <ItemListContainer /> */}
+      <Routes>
+        <Route exact path="/" element={<ItemListContainer />} />
+        <Route path="categoria/:catIdParams" element={<ItemListContainer />} />
+        <Route path="item/:itemIdParams" element={<ItemDetailContainer />} />
+      </Routes>
       
-      <Boton/>
-     
-      
-    </div>
+    </BrowserRouter>
   );
 }
 

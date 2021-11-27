@@ -1,0 +1,37 @@
+
+export const getFeched = [{
+  id: 1,
+  title:'Cerveza Honey',
+  description: 'Floral, delicada y suave. Manush Honey es una armónica combinación de maltas claras, miel y mucha pasión. Lúpulos: Willamette.',
+  price: 230,
+  pictureURL: 'https://cervezamanush.com.ar/2020/wp-content/uploads/2020/05/honey-1200x1200px.jpg',
+  stock: 5,
+  categoria: 'cervezas',
+},
+{
+  id: 2,
+  title: 'Cerveza Ipa',
+  description: 'Ale americana cobriza, floral, con toques herbáceos y cítricos. Buscamos el equilibrio entre el cuerpo y el lúpulo. Toda IPA Manush debe pasar la prueba del globo y  el elefante: volar establemente con un buen contrapeso. Lúpulos: Nugget y Cascade.',
+  price: 250,
+  pictureURL: 'https://cervezamanush.com.ar/2020/wp-content/uploads/2020/05/ipa-1200x1200px.jpg',
+  stock: 5,
+  categoria: 'cervezas',
+},
+{
+  id: 3,
+  title: 'Pack Clásico chico',
+  description: 'Caja de 6 latas, 1 IPA, 1 APA, 1 SESSION IPA, 1 EXTRA STOUT, 1 IRISH, 1 HONEY, un copón Manush Tulip con globo y un kit de posavasos.',
+  price: 1.950,
+  pictureURL: 'https://cervezamanush.com.ar/2020/wp-content/uploads/2020/06/pack-clasico-chico-1200x1200px.jpg',
+  stock: 5,
+  categoria: 'merchandising',
+},
+{
+  id: 4,
+  title: 'Colección de Posavasos',
+  description: 'Caja coleccionable con 12 modelos de posavasos diferentes y únicos. Diseños exquisitos de cartón prensado.',
+  price: 380,
+  pictureURL: 'https://cervezamanush.com.ar/2020/wp-content/uploads/2020/06/set-posavasos-01.jpg',
+  stock: 5,
+  categoria: 'merchandising',
+}]
