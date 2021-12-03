@@ -1,4 +1,5 @@
 import {useState} from "react";
+import {Button} from 'react-bootstrap'
 
 
 export default function ItemCount(props) {
@@ -27,11 +28,11 @@ export default function ItemCount(props) {
            
         return(
             <div>
-
-                <button onClick={sumarContador}>+</button>
-                {Count}                
-                <button onClick={restarContador}>-</button>
-                <button onClick={agregarCarrito}>Agregar al carrito</button>
+                
+                <p><Button variant="success" onClick={agregarCarrito}>Agregar al carrito</Button></p>
+                <Button variant="success" onClick={sumarContador}>+</Button>
+                {Count}              
+                <Button variant="danger" onClick={restarContador}>-</Button>
 
             </div>
         )

@@ -2,12 +2,10 @@ import React from 'react';
 import ItemCount from '../ItemCount';
 
 export const ItemDetail = ({item}) => {
-    console.log('este es el prop de item')
-    console.log(item)
 
     return (
         
-         <div container>
+         <div>
             <img src={item.pictureURL} alt={item.title} />
             <h3>{item.title}</h3>
             <p>{item.description}</p>

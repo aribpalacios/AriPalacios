@@ -7,10 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
+
+    
     <BrowserRouter>
       <NavBar />
-      {/* 
-      <ItemListContainer /> */}
       <Routes>
         <Route exact path="/" element={<ItemListContainer />} />
         <Route path="categoria/:catIdParams" element={<ItemListContainer />} />
@@ -18,6 +18,7 @@ function App() {
       </Routes>
       
     </BrowserRouter>
+
   );
 }
 
