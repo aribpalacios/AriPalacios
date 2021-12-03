@@ -14,23 +14,23 @@ export default function Item({item}) {
     return (
       <Container key={item.id}>
          <Card style={{ width: '18rem' }}>
-    <Link to={`/item/${item.id}`}>
-      <Card.Img variant="top" src={item.pictureURL} alt={item.title}/>
-    </Link>
-    <Card.Body>
-    <Card.Title >{item.title} </Card.Title>
-    <Card.Text>
-    {item.description}
-    </Card.Text>
-    <Card.Text>
-    {item.price}
-    </Card.Text>
-    <Card.Text>
-    <ItemCount stock={item.stock} id={item.id} />
-    </Card.Text>
-  </Card.Body>
-</Card>
-</Container>
+              <Link to={`/item/${item.id}`}>
+                <Card.Img variant="top" src={item.pictureURL} alt={item.title}/>
+              </Link>
+              <Card.Body>
+                  <Card.Title >{item.title} </Card.Title>
+                  <Card.Text>
+                  {item.description}
+                  </Card.Text>
+                  <Card.Text>
+                  {item.price}
+                  </Card.Text>
+                  <Card.Text>
+                  <ItemCount stock={item.stock} id={item.id} />
+                  </Card.Text>
+            </Card.Body>
+          </Card>
+        </Container>
 
       //       <div className="container" key={item.id}>
       //           <div className='row'>

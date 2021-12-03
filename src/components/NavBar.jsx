@@ -7,7 +7,7 @@ const NavBar = () => {
     return (
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-      <Navbar.Brand href="#home">Hoggen</Navbar.Brand>
+      <Navbar.Brand href="#home"><Link to="/">Hoggen</Link></Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="me-auto">
@@ -19,13 +19,13 @@ const NavBar = () => {
             <NavDropdown.Item href="#action/3.2">Pintas</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.3">Remeras</NavDropdown.Item>              
           </NavDropdown> */}
-          <Nav.Link href="#pricing">Nosotros</Nav.Link>
-          <Nav.Link href="#pricing">Contacto</Nav.Link>
+          {/* <Nav.Link href="#pricing">Nosotros</Nav.Link>
+          <Nav.Link href="#pricing">Contacto</Nav.Link> */}
         </Nav>
         <Nav>
-          <Nav.Link href="#deets">
+          <Link to='/Cart'>
             <CartWidget />
-          </Nav.Link>
+         </Link>
           
         </Nav>
       </Navbar.Collapse>

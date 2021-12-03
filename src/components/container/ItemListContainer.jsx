@@ -11,6 +11,7 @@ const ItemListContainer = () =>{
     const [loading, setLoading] = useState(true);
    
     const { catIdParams } = useParams(); 
+    
       useEffect(() => {
           const promesa = new Promise ((res, rej)=> {
               setLoading(true);
