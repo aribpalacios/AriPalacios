@@ -24,6 +24,8 @@ export default function ItemCount(props) {
 }
     
     const agregarCarrito = () => {
+
+        
         }
            
         return(
