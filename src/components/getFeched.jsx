@@ -21,7 +21,7 @@ export const getFeched = [{
   id: 3,
   title: 'Pack Clásico chico',
   description: 'Caja de 6 latas, 1 IPA, 1 APA, 1 SESSION IPA, 1 EXTRA STOUT, 1 IRISH, 1 HONEY, un copón Manush Tulip con globo y un kit de posavasos.',
-  price: 1.950,
+  price: 1950,
   pictureURL: 'https://cervezamanush.com.ar/2020/wp-content/uploads/2020/06/pack-clasico-chico-1200x1200px.jpg',
   stock: 5,
   categoria: 'merchandising',

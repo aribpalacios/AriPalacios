@@ -23,7 +23,7 @@ const NavBar = () => {
           <Nav.Link href="#pricing">Contacto</Nav.Link> */}
         </Nav>
         <Nav>
-          <Link to='/Cart'>
+          <Link to='/Cart'> 
             <CartWidget />
          </Link>
           
